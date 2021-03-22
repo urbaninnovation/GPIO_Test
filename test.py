@@ -1,1 +1,0 @@
-//Nur eine Testdatei. (NSC)
