@@ -21,7 +21,7 @@ button1.watch(function (err, value) {
     throw err;
   }
   a = value;
-  console.log("Schalter 1")
+  //console.log("Schalter 1")
 });
 
 //Watch for hardware interrupt of switch 2
@@ -41,12 +41,9 @@ button2.watch(function (err, value) {
 });
 
 //Watch for hardware interrupt of switch 3
-button3.watch(function (err, value) {
-  if (err) {
-    throw err;
-  }
-  a = value;
-  //console.log("Schalter gedrueckt!")
+button3.watch(function () {
+  
+  console.log("Schalter gedrueckt!")
 });
 
 process.on('SIGINT', exit);
