@@ -21,7 +21,7 @@ button1.watch(function (err, value) {
     throw err;
   }
   a = value;
-  console.log("Schalter 1");
+  console.log("Schalter 1")
 });
 
 //Watch for hardware interrupt of switch 2
@@ -30,7 +30,7 @@ button2.watch(function (err, value) {
     throw err;
   }
 	b = value;
-  console.log("Schalter 2");
+  console.log("Schalter 2")
 
 	//only evaluate if a = 1
 	if (a == 1 && b == 1) {
