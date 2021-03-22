@@ -8,11 +8,13 @@ pushButton.watch(function (err, value) { //Watch for hardware interrupts on push
   return;
   }
   LED.writeSync(value); //turn LED on or offf depending on the button state (0 or 1)
+console.log("gedrückt");
 });
 
 function unexportOnClose() { //function to run when exiting program
   LED.writeSync(0); // Turn LED off
   LED.unexport(); // Unexport LED GPIO to free resources
+  console.log("cu");
   pushButton.unexport(); // Unexport Button GPIO to free resources
 };
 
