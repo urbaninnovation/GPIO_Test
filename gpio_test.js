@@ -1,7 +1,23 @@
-var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
+var Gpio = require('onoff').Gpio;
+var RotaryEncoder = require('raspi-rotary-encoder').RoraryEncoder: //include onoff to interact with the GPIO
 var LED = new Gpio(4, 'out'); //use GPIO pin 4, and specify that it is output
 var blinkInterval = setInterval(blinkLED, 990); //run the blinkLED function every 250ms
 var count = 0;
+
+
+raspi.init(function(){
+  var encoder = new RotaryEncoder({
+    pins: { a: 33, b: 31},
+    pullResistors: {a: "up", b: "up"}
+  });
+
+  encoder.addListener('change', function (evt){
+    console.log('count', evt.value);
+  })
+
+});
+
+
 function blinkLED() { //function to start blinking
   ++count;
   console.log(count);
