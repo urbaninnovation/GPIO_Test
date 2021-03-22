@@ -3,8 +3,8 @@
 	 https://www.youtube.com/watch?v=hFpSwfKw5G0
 */
 var Gpio = require('onoff').Gpio
-   ,button1 = new Gpio(13, 'in', 'both') //blue button
-   ,button2 = new Gpio(6, 'in', 'both') //red button
+   ,button1 = new Gpio(6, 'in', 'both') //blue button
+   ,button2 = new Gpio(13, 'in', 'both') //red button
    ,a = 0 //a value GPIO 17
    ,b = 0 //b value GPIO 18
 	 ,v = 0 //value to increment/decrement
@@ -20,6 +20,7 @@ button1.watch(function (err, value) {
     throw err;
   }
   a = value;
+  console.log("Schalter 1")
 });
 
 //Watch for hardware interrupt of switch 2
