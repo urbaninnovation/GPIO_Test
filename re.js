@@ -45,7 +45,7 @@ button3.watch(function (err, value) {
   if (err) {
     throw err;
   }
-  //a = value;
+  a = value;
   console.log("Schalter gedrueckt!")
 });
 
