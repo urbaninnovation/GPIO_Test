@@ -1,8 +1,8 @@
 var Gpio = require('onoff').Gpio
    ,button1 = new Gpio(24, 'in', 'both') //blue button
    ,button2 = new Gpio(23, 'in', 'both') //red button
-   ,a = 0 //a value GPIO 17
-   ,b = 0 //b value GPIO 18
+   ,a = 0 //a value GPIO 24
+   ,b = 0 //b value GPIO 23
 	 ,v = 0 //value to increment/decrement
 
 function exit() {
@@ -17,6 +17,7 @@ button1.watch(function (err, value) {
     throw err;
   }
   a = value;
+  console.log(value);
 });
 
 //Watch for hardware interrupt of switch 2
