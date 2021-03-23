@@ -7,6 +7,7 @@ var Gpio = require('onoff').Gpio
 
 function exit() {
   button1.unexport();
+  button2.unexport();
   process.exit();
 }
 
