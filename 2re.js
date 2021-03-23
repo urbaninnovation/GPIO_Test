@@ -8,11 +8,6 @@ function exit() {
 }
 
 myEncoder.on('rotation', (direction, value) => {
-  if (direction == 'R') {
-    //console.log('Encoder rotated right');
-  } else {
-    //console.log('Encoder rotated left');
-  }
 
   console.log('Value is', value);
 });
