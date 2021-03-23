@@ -18,6 +18,7 @@ button1.watch(function (err, value) {
   }
   a = value;
   console.log("Schalterzustand a (gpio 24): ",value);
+
 });
 
 //Watch for hardware interrupt of switch 2
@@ -26,7 +27,7 @@ button2.watch(function (err, value) {
     throw err;
   }
 	b = value;
-console.log("Schalterzustand b (gpio 23): ",value);
+  console.log("Schalterzustand b (gpio 23): ",value);
 	//only evaluate if a = 1
 	if (a == 1 && b == 1) {
 	  console.log(v++);
