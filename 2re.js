@@ -8,15 +8,11 @@ console.log('zweimal clicken und der Zähler geht einen hoch oder herunter. ');
 function exit() {
   process.exit();
 }
-myBerechnung(value){
-    Ergebnis= value + value;
-    return (Ergebnis);
-}
+
 
 myEncoder.on('rotation', (direction, value) => {
 if (value != value_alt){
   console.log('Wert ist: ', value);
-  console.log("2mal: ", myBerechnung(value));
   value_alt = value;
   }
 });
