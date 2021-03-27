@@ -16,8 +16,8 @@ myBerechnung(value){
 myEncoder.on('rotation', (direction, value) => {
 if (value != value_alt){
   console.log('Wert ist: ', value);
-  value_alt = value;
   console.log("2mal: ", myBerechnung(value));
+  value_alt = value;
   }
 });
 
