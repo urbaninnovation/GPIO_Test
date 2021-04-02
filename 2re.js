@@ -12,7 +12,7 @@ function exit() {
 
 myEncoder.on('rotation', (direction, value) => {
 if (value != value_alt){
-  console.log('Wert ist: ', value);
+  console.log('Wert ist genau: ', value);
   value_alt = value;
   }
 });
