@@ -22,5 +22,5 @@ myEncoder.on('rotation', (direction, value) => {
   console.log('Wert ist genau: ', value);
 
   }
-});
+);
 process.on('SIGINT', exit);
