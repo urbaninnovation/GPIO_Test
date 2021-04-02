@@ -3,7 +3,7 @@ const myEncoder = nodaryEncoder(23, 24); // orginal hat  GPIO17 & GPIO18 genutzt
 var value_alt;
 //var value = 4;
 
-console.log('zweimal clicken und der Zähler geht einen hoch oder herunter. ');
+console.log('zweimal clicken und der Zähler geht um einen hoch oder herunter. ');
 
 function exit() {
   process.exit();
